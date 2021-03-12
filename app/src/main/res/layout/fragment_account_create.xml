@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.AccountCreateFragment">
+
+    <TextView
+        android:id="@+id/txtAccount"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Create your Hackathon Account"
+        android:textSize="26sp"
+        android:gravity="center"/>
+
+
+    <EditText
+        android:id="@+id/name_edit"
+        android:drawableStart="@drawable/select_name_icon"
+        android:drawablePadding="4dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="name"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@id/txtAccount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/edit_text_input"/>
+
+    <EditText
+        android:id="@+id/email_edit"
+        android:drawableStart="@drawable/select_email_icon"
+        android:drawablePadding="4dp"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="email"
+        android:inputType="textEmailAddress"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@id/name_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/edit_text_input"/>
+
+    <EditText
+        android:id="@+id/pass_edit"
+        android:drawablePadding="4dp"
+        android:drawableStart="@drawable/select_pass_icon"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="password"
+        android:inputType="textPassword"
+        android:paddingStart="6dp"
+        android:paddingEnd="6dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintTop_toBottomOf="@id/email_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/edit_text_input"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
