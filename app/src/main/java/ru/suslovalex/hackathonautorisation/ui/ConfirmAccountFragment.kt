@@ -14,7 +14,7 @@ class ConfirmAccountFragment: Fragment(R.layout.fragment_confirm_account) {
 
         val btnConfirmAccount: Button = view.findViewById(R.id.btnOk)
         btnConfirmAccount.setOnClickListener {
-            it.findNavController().navigate(R.id.action_confirmAccountFragment_to_profileFragment)
+            it.findNavController().navigate(R.id.action_confirmAccountFragment_to_listAllTeamsFragment)
         }
     }
 }

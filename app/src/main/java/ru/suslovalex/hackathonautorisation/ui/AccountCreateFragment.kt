@@ -15,7 +15,7 @@ class AccountCreateFragment : Fragment(R.layout.fragment_account_create) {
 
         val btnCreate: Button = view.findViewById(R.id.btnCreate)
         btnCreate.setOnClickListener {
-            it.findNavController().navigate(R.id.action_accountCreateFragment_to_profileFragment)
+            it.findNavController().navigate(R.id.action_accountCreateFragment_to_listAllTeamsFragment)
         }
     }
 
