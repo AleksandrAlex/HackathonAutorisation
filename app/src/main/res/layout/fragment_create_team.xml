@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CreateTeamFragment">
+
+   <TextView
+       android:id="@+id/txtCreateTeam"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:text="@string/create_your_own_team_here_let_s_start"
+       android:textSize="30sp"
+       android:textColor="@color/black"
+       android:layout_marginTop="10dp"
+       android:layout_marginStart="10dp"
+       android:layout_marginEnd="10dp"/>
+
+   <EditText
+       android:id="@+id/edit_name_team"
+       android:layout_width="0dp"
+       android:layout_height="40dp"
+       android:layout_marginTop="20dp"
+       android:layout_marginEnd="10dp"
+       android:layout_marginStart="10dp"
+       android:hint="@string/input_team_name"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/txtCreateTeam"
+       app:layout_constraintStart_toStartOf="parent"
+       android:textSize="18sp"
+       android:background="@drawable/edit_text_input"
+       android:paddingStart="10dp"
+       android:paddingEnd="6dp"/>
+
+   <EditText
+       android:id="@+id/edit_team_description"
+       android:layout_width="0dp"
+       android:layout_height="40dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginEnd="10dp"
+       android:layout_marginStart="10dp"
+       android:hint="@string/description_edit"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@id/edit_name_team"
+       app:layout_constraintStart_toStartOf="parent"
+       android:textSize="18sp"
+       android:background="@drawable/edit_text_input"
+       android:paddingStart="10dp"
+       android:paddingEnd="6dp"/>
+
+   <com.google.android.material.button.MaterialButton
+       android:id="@+id/btnAddTeam"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/add_team"
+       app:layout_constraintTop_toBottomOf="@+id/edit_team_description"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       android:layout_marginTop="10dp"
+       app:icon="@drawable/ic_ok"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

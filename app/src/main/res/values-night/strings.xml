@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="wright_name_team">wright name team:</string>
+    <string name="description_edit">please write some description</string>
+    <string name="add_team">Add Team</string>
+</resources>

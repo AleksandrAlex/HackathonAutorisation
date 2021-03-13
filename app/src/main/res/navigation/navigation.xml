@@ -50,5 +50,18 @@
         android:id="@+id/listAllTeamsFragment"
         android:name="ru.suslovalex.hackathonautorisation.ListAllTeamsFragment"
         android:label="fragment_list_all_teams"
-        tools:layout="@layout/fragment_list_all_teams" />
+        tools:layout="@layout/fragment_list_all_teams" >
+        <action
+            android:id="@+id/action_listAllTeamsFragment_to_createCommandFragment"
+            app:destination="@id/createCommandFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createCommandFragment"
+        android:name="ru.suslovalex.hackathonautorisation.CreateTeamFragment"
+        android:label="fragment_create_command"
+        tools:layout="@layout/fragment_create_team" >
+        <action
+            android:id="@+id/action_createCommandFragment_to_listAllTeamsFragment"
+            app:destination="@id/listAllTeamsFragment" />
+    </fragment>
 </navigation>

@@ -6,4 +6,9 @@
     <string name="ok">ok</string>
     <string name="sign_in">sign in</string>
     <string name="team_list">Team List</string>
+    <string name="create_your_own_team_here_let_s_start">Create your own team here.</string>
+    <string name="team_name">team name:</string>
+    <string name="input_team_name">please input team name here</string>
+    <string name="description_edit">please write some description</string>
+    <string name="add_team">Add Team</string>
 </resources>
