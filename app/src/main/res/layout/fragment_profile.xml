@@ -13,10 +13,12 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
-        android:text="My Profile"
+        android:text="Chuck Norris"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"/>
 
     <ImageView
         android:id="@+id/photo"
@@ -29,13 +31,13 @@
         android:layout_marginTop="10dp"/>
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/txtAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/photo"
         app:layout_constraintStart_toEndOf="@+id/photo"
         android:layout_marginEnd="10dp"
-        android:text="name: "
+        android:text="age: "
         android:layout_marginStart="10dp"
         />
 
@@ -43,7 +45,7 @@
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/txtAge"
         app:layout_constraintStart_toEndOf="@+id/photo"
         android:layout_marginEnd="10dp"
         android:text="telegram id: "
@@ -55,10 +57,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@+id/photo"
-        app:layout_constraintStart_toEndOf="@+id/name"
+        app:layout_constraintStart_toEndOf="@+id/txtAge"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="10dp"
-        android:text="Chuck Norris"
+        android:text="80"
         android:layout_marginStart="10dp"
         />
 
@@ -66,11 +68,11 @@
         android:id="@+id/txtEmail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintTop_toBottomOf="@+id/txtAge"
         app:layout_constraintStart_toEndOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="10dp"
-        android:text="chuck_norris@yandex.ru"
+        android:text="-@chuck_norris"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"/>
 
@@ -121,25 +123,47 @@
         android:layout_marginTop="10dp"/>
 
     <TextView
-        android:id="@+id/aboutMe"
+        android:id="@+id/skills"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/txtContacts"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_marginEnd="10dp"
-        android:text="about me:"
+        android:text="My skills:"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/txtSkills"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtContacts"
+        app:layout_constraintStart_toEndOf="@id/skills"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        android:text="SQLite, Room, Retrofit, Koin..."
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"/>
 
     <TextView
         android:id="@+id/txtAboutMe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtSkills"
+        app:layout_constraintStart_toStartOf="@id/skills"
+        android:layout_marginEnd="10dp"
+        android:text="About me:"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/info_about_me"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/txtContacts"
-        app:layout_constraintStart_toEndOf="@id/aboutMe"
+        app:layout_constraintTop_toBottomOf="@+id/txtSkills"
+        app:layout_constraintStart_toEndOf="@id/txtAboutMe"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="10dp"
-        android:text="I like cookies"
+        android:text="I really like development, fluently speak english. I wish to be helpful my future team"
         android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"/>
 
