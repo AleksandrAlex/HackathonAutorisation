@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnHaveAccount"
+        android:id="@+id/btnCreateAccount"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -33,8 +33,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="@string/sign_in"
-        app:layout_constraintEnd_toEndOf="@id/btnHaveAccount"
-        app:layout_constraintStart_toStartOf="@id/btnHaveAccount"
-        app:layout_constraintTop_toBottomOf="@+id/btnHaveAccount" />
+        app:layout_constraintEnd_toEndOf="@id/btnCreateAccount"
+        app:layout_constraintStart_toStartOf="@id/btnCreateAccount"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreateAccount" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
