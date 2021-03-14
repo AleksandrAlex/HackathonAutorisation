@@ -1,4 +1,4 @@
-package ru.suslovalex.hackathonautorisation
+package ru.suslovalex.hackathonautorisation.ui
 
 import android.os.Bundle
 
@@ -10,6 +10,8 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import ru.suslovalex.hackathonautorisation.R
+
 
 
 class TeamDescriptionFragment : Fragment() {

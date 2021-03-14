@@ -1,10 +1,11 @@
-package ru.suslovalex.hackathonautorisation
+package ru.suslovalex.hackathonautorisation.ui
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import ru.suslovalex.hackathonautorisation.R
 
 
 class CreateTeamFragment : Fragment(R.layout.fragment_create_team) {

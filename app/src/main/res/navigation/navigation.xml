@@ -45,10 +45,14 @@
         android:id="@+id/profileFragment"
         android:name="ru.suslovalex.hackathonautorisation.ui.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_listAllTeamsFragment"
+            app:destination="@id/listAllTeamsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/listAllTeamsFragment"
-        android:name="ru.suslovalex.hackathonautorisation.ListAllTeamsFragment"
+        android:name="ru.suslovalex.hackathonautorisation.ui.ListAllTeamsFragment"
         android:label="fragment_list_all_teams"
         tools:layout="@layout/fragment_list_all_teams" >
         <action
@@ -57,10 +61,13 @@
         <action
             android:id="@+id/action_listAllTeamsFragment_to_teamDescriptionFragment"
             app:destination="@id/teamDescriptionFragment" />
+        <action
+            android:id="@+id/action_listAllTeamsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/createCommandFragment"
-        android:name="ru.suslovalex.hackathonautorisation.CreateTeamFragment"
+        android:name="ru.suslovalex.hackathonautorisation.ui.CreateTeamFragment"
         android:label="fragment_create_command"
         tools:layout="@layout/fragment_create_team" >
         <action
@@ -69,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/teamDescriptionFragment"
-        android:name="ru.suslovalex.hackathonautorisation.TeamDescriptionFragment"
+        android:name="ru.suslovalex.hackathonautorisation.ui.TeamDescriptionFragment"
         android:label="fragment_team_description"
         tools:layout="@layout/fragment_team_description" >
         <argument

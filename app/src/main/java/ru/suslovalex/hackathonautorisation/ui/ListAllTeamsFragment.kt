@@ -1,14 +1,19 @@
-package ru.suslovalex.hackathonautorisation
+package ru.suslovalex.hackathonautorisation.ui
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
+import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import ru.suslovalex.hackathonautorisation.R
 import ru.suslovalex.hackathonautorisation.data.Team
-import ru.suslovalex.hackathonautorisation.ui.AdapterTeam
 
 
 class ListAllTeamsFragment : Fragment(R.layout.fragment_list_all_teams) {
@@ -18,8 +23,35 @@ class ListAllTeamsFragment : Fragment(R.layout.fragment_list_all_teams) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        setupToolbar(view)
+
         setupUi(view)
         setupFab(view)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        activity?.menuInflater?.inflate(R.menu.menu, menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id = item.itemId
+        if (id == R.id.profile){
+            findNavController().navigate(R.id.action_listAllTeamsFragment_to_profileFragment)
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        setHasOptionsMenu(true)
+        super.onCreate(savedInstanceState)
+    }
+
+    private fun setupToolbar(view: View) {
+
+        val toolbar: Toolbar = view.findViewById(R.id.toolbar)
+        activity?.setActionBar(toolbar)
+
     }
 
     private fun setupFab(view: View) {
@@ -46,7 +78,8 @@ class ListAllTeamsFragment : Fragment(R.layout.fragment_list_all_teams) {
     }
 
     private fun onClick(team: Team) {
-        val action = ListAllTeamsFragmentDirections.actionListAllTeamsFragmentToTeamDescriptionFragment(team)
+        val action =
+            ListAllTeamsFragmentDirections.actionListAllTeamsFragmentToTeamDescriptionFragment(team)
         view?.findNavController()?.navigate(action)
 
 

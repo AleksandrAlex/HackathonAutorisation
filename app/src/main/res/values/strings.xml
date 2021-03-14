@@ -17,4 +17,6 @@
     <string name="users">users:</string>
     <string name="description">Description:</string>
     <string name="go_back">Go Back</string>
+    <string name="list_teams">List Teams</string>
+    <string name="profile">Profile</string>
 </resources>
