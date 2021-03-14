@@ -71,5 +71,12 @@
         android:id="@+id/teamDescriptionFragment"
         android:name="ru.suslovalex.hackathonautorisation.TeamDescriptionFragment"
         android:label="fragment_team_description"
-        tools:layout="@layout/fragment_team_description" />
+        tools:layout="@layout/fragment_team_description" >
+        <argument
+            android:name="team"
+            app:argType="ru.suslovalex.hackathonautorisation.data.Team" />
+        <action
+            android:id="@+id/action_teamDescriptionFragment_to_listAllTeamsFragment"
+            app:destination="@id/listAllTeamsFragment" />
+    </fragment>
 </navigation>

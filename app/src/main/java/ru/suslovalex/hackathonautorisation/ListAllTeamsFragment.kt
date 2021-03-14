@@ -46,7 +46,8 @@ class ListAllTeamsFragment : Fragment(R.layout.fragment_list_all_teams) {
     }
 
     private fun onClick(team: Team) {
-        view?.findNavController()?.navigate(R.id.action_listAllTeamsFragment_to_teamDescriptionFragment)
+        val action = ListAllTeamsFragmentDirections.actionListAllTeamsFragmentToTeamDescriptionFragment(team)
+        view?.findNavController()?.navigate(action)
 
 
     }
