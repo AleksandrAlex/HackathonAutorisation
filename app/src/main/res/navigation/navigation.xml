@@ -54,6 +54,9 @@
         <action
             android:id="@+id/action_listAllTeamsFragment_to_createCommandFragment"
             app:destination="@id/createCommandFragment" />
+        <action
+            android:id="@+id/action_listAllTeamsFragment_to_teamDescriptionFragment"
+            app:destination="@id/teamDescriptionFragment" />
     </fragment>
     <fragment
         android:id="@+id/createCommandFragment"
@@ -64,4 +67,9 @@
             android:id="@+id/action_createCommandFragment_to_listAllTeamsFragment"
             app:destination="@id/listAllTeamsFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/teamDescriptionFragment"
+        android:name="ru.suslovalex.hackathonautorisation.TeamDescriptionFragment"
+        android:label="fragment_team_description"
+        tools:layout="@layout/fragment_team_description" />
 </navigation>

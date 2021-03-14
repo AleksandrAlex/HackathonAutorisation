@@ -13,7 +13,7 @@ import ru.suslovalex.hackathonautorisation.ui.AdapterTeam
 
 class ListAllTeamsFragment : Fragment(R.layout.fragment_list_all_teams) {
 
-    private val teamAdapter = AdapterTeam()
+    private lateinit var teamAdapter : AdapterTeam
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -30,6 +30,8 @@ class ListAllTeamsFragment : Fragment(R.layout.fragment_list_all_teams) {
     }
 
     private fun setupUi(view: View) {
+
+        teamAdapter = AdapterTeam{team -> onClick(team) }
         val teamsList: RecyclerView = view.findViewById(R.id.teams_list)
         teamsList.apply {
             layoutManager = LinearLayoutManager(context)
@@ -40,6 +42,12 @@ class ListAllTeamsFragment : Fragment(R.layout.fragment_list_all_teams) {
             list.add(Team(name = "team $i", description = "description $i"))
         }
         teamAdapter.submitList(list)
+
+    }
+
+    private fun onClick(team: Team) {
+        view?.findNavController()?.navigate(R.id.action_listAllTeamsFragment_to_teamDescriptionFragment)
+
 
     }
 

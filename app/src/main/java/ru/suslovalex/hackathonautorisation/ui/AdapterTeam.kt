@@ -11,7 +11,7 @@ import ru.suslovalex.hackathonautorisation.R
 import ru.suslovalex.hackathonautorisation.data.Team
 
 
-class AdapterTeam: ListAdapter<Team, TeamViewHolder>(TeamDiffUtil()) {
+class AdapterTeam(private val adapterOnClick: (Team) -> Unit): ListAdapter<Team, TeamViewHolder>(TeamDiffUtil()) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TeamViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_team, parent, false)
         return TeamViewHolder(view)
@@ -19,6 +19,9 @@ class AdapterTeam: ListAdapter<Team, TeamViewHolder>(TeamDiffUtil()) {
 
     override fun onBindViewHolder(holder: TeamViewHolder, position: Int) {
         holder.bind(getItem(position))
+        holder.itemView.setOnClickListener {
+            adapterOnClick(getItem(position))
+        }
     }
 }
 
